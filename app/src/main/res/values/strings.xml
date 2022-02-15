@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MediaLists</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_tv">Movies/Series</string>
+    <string name="title_games">Videogames</string>
+    <string name="title_music">Music</string>
+    <string name="title_books">Books</string>
+    <string name="title_add">Add</string>
+    <string name="title_search">Search</string>
+    <string name="default_google_web_client_id">400604990939-d7j68qorqf1e4k39beetk9vgh9nnll33.apps.googleusercontent.com</string>
+    <string name="TVSearchableLabel">Label</string>
+    <string name="TVSearchableHint">Search series and movies</string>
+    <string name="TMDB_API_Key">120388a6d6642d3b10de0661d68fd531</string>
+    <string name="last.fm_API_Key">2ea7daa85cfff8c2b8f3d6519cedb5ed</string>
+    <string name="Google_API_Key">AIzaSyC9NF8703EefVNF9UUYkyj1-ERyVGfKgI4</string>
+    <string name="add">Add</string>
+    <string name="list_title">List title</string>
+    <string name="list_needs_name_dialog_text">The list needs a title</string>
+    <string name="list_needs_name_dialog_title">No title</string>
+    <string name="remove_list">Are you sure you want to remove this list?</string>
+    <string name="remove_list_title">Remove list</string>
+    <string name="remove_item">Are you sure you want to remove this item from the list?</string>
+    <string name="remove_item_title">Remove item</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+
+</resources>

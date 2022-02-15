@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.plorrios.medialists.ui.Start.StartFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/action_startFragment_to_navigation_games"
+            app:destination="@id/navigation_games" />
+        <action
+            android:id="@+id/action_startFragment_to_navigation_music"
+            app:destination="@id/navigation_music" />
+        <action
+            android:id="@+id/action_startFragment_to_navigation_books"
+            app:destination="@id/navigation_books" />
+        <action
+            android:id="@+id/action_startFragment_to_navigation_tv"
+            app:destination="@id/navigation_tv" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tv"
+        android:name="com.plorrios.medialists.ui.TV.Views.TVFragment"
+        android:label="@string/title_tv"
+        tools:layout="@layout/t_v_fragment" >
+        <action
+            android:id="@+id/action_navigation_tv_to_addListFragment"
+            app:destination="@id/addListFragment" >
+        <argument
+            android:name="listType"
+            app:argType="integer"
+            android:defaultValue="0" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_tv_to_searchTVFragment"
+            app:destination="@id/searchTVFragment" />
+        <action
+            android:id="@+id/action_navigation_tv_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_tv_to_seriesDetailsFragment"
+            app:destination="@id/seriesDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_games"
+        android:name="com.plorrios.medialists.ui.games.Views.GamesFragment"
+        android:label="@string/title_games"
+        tools:layout="@layout/fragment_games">
+        <action
+            android:id="@+id/action_navigation_games_to_addListFragment"
+            app:destination="@id/addListFragment" >
+            <argument
+                android:name="listType"
+                app:argType="integer"
+                android:defaultValue="1" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_games_to_gamesSearchFragment"
+            app:destination="@id/gamesSearchFragment" />
+        <action
+            android:id="@+id/action_navigation_games_to_gameDetailsFragment"
+            app:destination="@id/gameDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_music"
+        android:name="com.plorrios.medialists.ui.music.Views.MusicFragment"
+        android:label="@string/title_music"
+        tools:layout="@layout/fragment_music">
+        <action
+            android:id="@+id/action_navigation_music_to_addListFragment"
+            app:destination="@id/addListFragment" >
+            <argument
+                android:name="listType"
+                app:argType="integer"
+                android:defaultValue="2" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_music_to_musicSearchFragment"
+            app:destination="@id/musicSearchFragment" />
+        <action
+            android:id="@+id/action_navigation_music_to_songDetailsFragment"
+            app:destination="@id/songDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_books"
+        android:name="com.plorrios.medialists.ui.books.Views.BooksFragment"
+        android:label="@string/title_books"
+        tools:layout="@layout/fragment_books" >
+        <action
+            android:id="@+id/action_navigation_books_to_addListFragment"
+            app:destination="@id/addListFragment" >
+            <argument
+                android:name="listType"
+                app:argType="integer"
+                android:defaultValue="3" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_books_to_booksSearchFragment"
+            app:destination="@id/booksSearchFragment" />
+        <action
+            android:id="@+id/action_navigation_books_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addListFragment"
+        android:name="com.plorrios.medialists.ui.ListManagement.AddListFragment"
+        android:label="add_list_fragment"
+        tools:layout="@layout/add_list_fragment">
+        <argument
+            android:name="listType"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchTVFragment"
+        android:name="com.plorrios.medialists.ui.TV.Views.TVSearchFragment"
+        android:label="fragment_search_t_v"
+        tools:layout="@layout/fragment_search_t_v" >
+        <action
+            android:id="@+id/action_searchTVFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_searchTVFragment_to_seriesDetailsFragment"
+            app:destination="@id/seriesDetailsFragment" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicSearchFragment"
+        android:name="com.plorrios.medialists.ui.music.Views.MusicSearchFragment"
+        android:label="fragment_music_search"
+        tools:layout="@layout/fragment_music_search" >
+        <action
+            android:id="@+id/action_musicSearchFragment_to_songDetailsFragment"
+            app:destination="@id/songDetailsFragment" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksSearchFragment"
+        android:name="com.plorrios.medialists.ui.books.Views.BooksSearchFragment"
+        android:label="fragment_books_search"
+        tools:layout="@layout/fragment_books_search" >
+        <action
+            android:id="@+id/action_booksSearchFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesSearchFragment"
+        android:name="com.plorrios.medialists.ui.games.Views.GamesSearchFragment"
+        android:label="fragment_games_search"
+        tools:layout="@layout/fragment_games_search" >
+        <action
+            android:id="@+id/action_gamesSearchFragment_to_gameDetailsFragment"
+            app:destination="@id/gameDetailsFragment" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.plorrios.medialists.ui.TV.Views.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details" >
+        <argument
+            android:name="movie_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
+    
+    <fragment
+        android:id="@+id/seriesDetailsFragment"
+        android:name="com.plorrios.medialists.ui.TV.Views.SeriesDetailsFragment"
+        android:label="fragment_series_details"
+        tools:layout="@layout/fragment_series_details" >
+        <argument
+            android:name="series_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.plorrios.medialists.ui.books.Views.BookDetailsFragment"
+        android:label="fragment_book_details"
+        tools:layout="@layout/fragment_book_details" >
+        <argument
+            android:name="book_id"
+            app:argType="string"
+            android:defaultValue="0" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameDetailsFragment"
+        android:name="com.plorrios.medialists.ui.games.Views.GameDetailsFragment"
+        android:label="fragment_game_details"
+        tools:layout="@layout/fragment_game_details" >
+
+        <argument
+            android:name="game_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/songDetailsFragment"
+        android:name="com.plorrios.medialists.ui.music.Views.SongDetailsFragment"
+        android:label="fragment_song_details"
+        tools:layout="@layout/fragment_song_details" >
+        <argument
+            android:name="song_title"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="song_artist"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="list_name"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
+
+</navigation>

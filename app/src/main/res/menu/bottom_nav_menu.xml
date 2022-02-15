@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_tv"
+        android:icon="@drawable/ic_baseline_tv_24"
+        android:title="@string/title_tv" />
+
+    <item
+        android:id="@+id/navigation_games"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"
+        android:title="@string/title_games" />
+
+    <item
+        android:id="@+id/navigation_music"
+        android:icon="@drawable/ic_baseline_music_note_24"
+        android:title="@string/title_music" />
+
+    <item
+        android:id="@+id/navigation_books"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="@string/title_books" />
+
+    <item
+        android:id="@+id/invisible"
+        android:visible="false"
+        android:icon="@drawable/ic_baseline_tv_24"
+        android:title="@string/app_name" />
+
+
+</menu>
